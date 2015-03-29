@@ -10,12 +10,26 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
+## setting variables
+
+
+```r
+y <- rnorm(1:10)
+x1 <- rnorm(1:10)
+x2 <- rnorm(1:10)
+x3<- rnorm(1:10)
+```
+
+---
 
 ## Read-And-Delete
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+
+```r
+fit <- lm(y ~ x1 + x2 + x3)
+#!summary(fit)
+```
+
 
 --- .class #id 
 
@@ -38,4 +52,4 @@ But this is slide 3.  I think I'm going to be seeing quite a lot of you
 plot(rnorm(1:100), rnorm(1:100))
 ```
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 

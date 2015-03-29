@@ -10,12 +10,24 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
+## setting variables
+
+```{r}
+y <- rnorm(1:10)
+x1 <- rnorm(1:10)
+x2 <- rnorm(1:10)
+x3<- rnorm(1:10)
+```
+
+---
 
 ## Read-And-Delete
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+```{r results='hide'}
+fit <- lm(y ~ x1 + x2 + x3)
+#!summary(fit)
+```
+
 
 --- .class #id 
 
